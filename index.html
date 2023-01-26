@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <nav class="nav"><h2>Répertoire des contacts</h2></nav>
+      <form action="#">
+        <template>
+          <img src="/ressources/check.svg" alt="icon" />
+          <span class="error_message">message erreur</span>
+        </template>
+        <nav class="form_header">Formulaire de contact</nav>
+        <div class="form_groupe">
+          <label for="prenom">Prénom</label>
+          <input type="text" class="prenom" name="prenom" />
+        </div>
+        <div class="form_groupe">
+          <label for="nom">Nom</label>
+          <input type="text" class="nom" name="nom" />
+        </div>
+        <div class="form_groupe">
+          <label for="telephone">Télephone</label>
+          <input type="text" class="telephone" name="telephone" />
+        </div>
+        <div class="form_groupe">
+          <label for="groupe">Groupe</label>
+          <input type="text" class="groupe" name="groupe" />
+        </div>
+        <div class="form_groupe">
+          <label for="email">Email</label>
+          <input type="text" class="email" name="email" />
+        </div>
+        <div class="form_groupe">
+          <label for="bio">Bio</label>
+          <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form_groupe">
+          <label for="file">
+            Déposez la photo <br />
+            ici</label
+          >
+          <input type="file" class="file" name="file" hidden />
+        </div>
+        <div class="bouttons">
+          <button class="btn_creer" name="btn_creer">Créer</button>
+          <button class="btn_reset" name="btn_reset">Rénit</button>
+        </div>
+      </form>
+
+      <div class="list_element">
+        <nav class="list_element">Liste des contacts</nav>
+        <li class="element">
+          <div class="img"><img src="/ressources/portrait5.jpg" alt="" /></div>
+          <div class="contenue">
+            <p>Prénom Nom - Groupe</p>
+            <p>Télephone</p>
+            <p>
+              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s.
+            </p>
+          </div>
+        </li>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
