@@ -1,23 +1,18 @@
-let mot = 'salut mec salut salut'
-let obj = {}
+import { render } from "./module/generateurElement.js";
 
-function strTOarray(val){
-let tab = val.split(" ")
-// console.log(tab)
-// let b = tab.filter((key,index)=>key[index].lenght = !index).length+1
-for(let word of tab){
-    if(obj[word]){
-        obj[word]++
-    }else{
-        obj[word]=1
-    }
-}
+const form = document.querySelector('form')
+const tab = []
+let isModifying = false;
+let modifyIndex = -1
 
-console.log(obj)
-}
-
-strTOarray(mot)
-
+form.addEventListener('submit', event => {
+    event.preventDefault()
+    const obj_contact = Object.fromEntries(new FormData(form))
+    if(!isModifying){
+    tab.push(obj_contact)
+    }else{tab[modifyIndex] = obj_contact;modifyIndex = -1;isModifying = false}
+     render(tab)
+})
 
 
 

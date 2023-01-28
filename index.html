@@ -5,70 +5,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <main>
-      <nav class="nav"><h2>Répertoire des contacts</h2></nav>
-      <form action="#">
-        <template>
-          <img src="/ressources/check.svg" alt="icon" />
-          <span class="error_message">message erreur</span>
-        </template>
-        <nav class="form_header">Formulaire de contact</nav>
-        <div class="form_groupe">
-          <label for="prenom">Prénom</label>
-          <input type="text" class="prenom" name="prenom" />
-        </div>
-        <div class="form_groupe">
-          <label for="nom">Nom</label>
-          <input type="text" class="nom" name="nom" />
-        </div>
-        <div class="form_groupe">
-          <label for="telephone">Télephone</label>
-          <input type="text" class="telephone" name="telephone" />
-        </div>
-        <div class="form_groupe">
-          <label for="groupe">Groupe</label>
-          <input type="text" class="groupe" name="groupe" />
-        </div>
-        <div class="form_groupe">
-          <label for="email">Email</label>
-          <input type="text" class="email" name="email" />
-        </div>
-        <div class="form_groupe">
-          <label for="bio">Bio</label>
-          <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
-        </div>
-        <div class="form_groupe">
-          <label for="file">
-            Déposez la photo <br />
-            ici</label
+      <nav class="nav bg_blue hSize HSize  templeteHead flex flex_ai ">
+        <h2>Répertoire des contacts</h2>
+      </nav>
+      <div class="flex margeBig bg_parent gapsmall flex_jcc  Hmax">
+        <form
+          action="#"
+          class="colsmall bg_fff bg_black HHSize flex flex_dc flex_jsb"
+        >
+          <template>
+            <img src="/ressources/check.svg" alt="icon" />
+            <span class="error_message">message erreur</span>
+          </template>
+          <nav
+            class=" bg_blue colsmall hSize flex_ai flex flex_jcc bg_ff templeteHead PL"
           >
-          <input type="file" class="file" name="file" hidden />
-        </div>
-        <div class="bouttons">
-          <button class="btn_creer" name="btn_creer">Créer</button>
-          <button class="btn_reset" name="btn_reset">Rénit</button>
-        </div>
-      </form>
-
-      <div class="list_element">
-        <nav class="list_element">Liste des contacts</nav>
-        <li class="element">
-          <div class="img"><img src="/ressources/portrait5.jpg" alt="" /></div>
-          <div class="contenue">
-            <p>Prénom Nom - Groupe</p>
-            <p>Télephone</p>
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s.
-            </p>
+            <p>Formulaire de contact</p>
+          </nav>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label for="prenom">Prénom</label>
+            <input type="text" class="prenom inputSizeH" name="prenom" />
           </div>
-        </li>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label for="nom">Nom</label>
+            <input type="text" class="nom inputSizeH" name="nom" />
+          </div>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label for="telephone">Télephone</label>
+            <input type="text" class="telephone inputSizeH" name="telephone" />
+          </div>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label for="groupe">Groupe</label>
+            <input type="text" class="groupe inputSizeH" name="groupe" />
+          </div>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label for="email">Email</label>
+            <input type="text" class="email inputSizeH" name="email" />
+          </div>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label for="bio">Bio</label>
+            <textarea
+              name="bio"
+              class="hbio"
+              id="bio"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="form_groupe flex flex_dc margin gapsmall">
+            <label
+              for="file"
+              class=" image templetePhoto flex flex_ai flex_jcc"
+            >
+              Déposez la photo <br />
+              ici</label
+            >
+            <input type="file" class="file" id="file" name="file" hidden />
+          </div>
+          <div class="bouttons">
+            <button
+              class="btn_creer bg_blue templeteButton PLM"
+              name="btn_creer"
+            >
+              Créer
+            </button>
+            <button class="btn_reset templeteButton bg_red" name="btn_reset">
+              Rénit
+            </button>
+          </div>
+        </form>
+
+        <div class="list_element col bg_fff bg_brown">
+          <nav
+            class="list_element bg_blue hSize flex_ai flex flex_jcc bg_ff templeteHead"
+          >
+            Liste des contacts
+          </nav>
+          <li class="element flex gapsmall margin flex_ai flex_dc  col">
+            <!-- <div class="img">
+              <img
+                src="/ressources/portrait5.jpg"
+                alt="portrait5"
+                class="imgRaduis"
+              />
+            </div>
+            <div class="contenue flex flex_dc gapsmall">
+              <p>Prénom Nom - Groupe</p>
+              <p>Télephone</p>
+              <p>
+                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.
+              </p>
+            </div>
+            <div class="icon flex">
+              <button class="modifie flex bg_fff ">
+                <i class="fa-solid fa-user-pen bg_brown"></i>
+              </button>
+              <button class="deleteMe flex bg_fff bg_fff ">
+                <i class="fa-regular fa-trash-can bgc_red"></i>
+              </button>
+            </div> -->
+          </li>
+        </div>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>

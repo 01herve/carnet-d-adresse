@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{font-family: 'Poppins';font-style: normal;text-align: cente;color: #fff;}
+
+.templeteHead{font-size: 20px;line-height: 30px;color:#fff}
+.templeteButton{width: 135px;height: 44px; border: none;}
+.templetePhoto{border: 2px #ddd dashed;font-weight: 500;font-size: 16px;line-height: 24px;
+text-align: center; height: 140px;color: #555555;
+}
+
+.bg_blue{background-color: #0880D6;}
+.bg_brown{color: #555555;}
+.bg_parent{background-color: #DDDDDD}
+.bg_fff{background-color: #fff;}
+.bg_red{background-color:  #FF3838;}
+.bgc_red{color:  #FF3838;}
+.bg_black{color: black;}
+
+
+
+
+.hSize{height: 54px;}
+.HSize{height: 70px;}
+.wmax{height: 100vw;}
+.inputSizeH{height: 45px; outline: none;}
+.HHSize{height: 68rem;}
+.margeBig{margin:15px 86px ;}
+.margeBig{margin:15px 86px ;}
+.margin{margin: 20px;}
+.gapsmall{gap: 15px;}
+.PL{padding-left: 20px;}
+.PLM{margin-left: 20px;}
+.hbio{height: 115px;}
+.colsmall{width:35vw}
+.col{width:55vw}
+
+.flex{display: flex; }
+.flex_dc{flex-direction: column;}
+.flex_ai{align-items: center;}
+.flex_jcc{justify-content: center;}
+.flex_jsb{justify-content: space-between;}
+
+.imgRaduis{height: 140px; width: 140px; border-radius: 140px;}
+.icon{align-self: stretch;top: 0;}
+.icon button{top: 0;margin: 12px 8px; border-color: none; border: none;}
+.image.active{border: #555555 2px solid;}
+
+.brdr{border-bottom: #555555 1px solid;}
+
+
