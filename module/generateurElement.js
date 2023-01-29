@@ -17,7 +17,7 @@ export function render(tab) {
     `).join('')
     document.querySelector('li').innerHTML = panels
 }
-function deleteElement(index) {tab.splice(index, 1);render()}
+window.deleteElement = function (index) {tab.splice(index, 1);render()}
 function modifyElement(index) {modifyIndex = index;isModifying = true
     for(const field in tab[modifyIndex])form[field].value = tab[modifyIndex][field]}
 
