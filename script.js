@@ -26,7 +26,7 @@ function render() {
                 </p>
             </div>
             <div class="icon flex">
-                <button class="modifie flex bg_fff" onclick= modifyElement(${index} >
+                <button class="modifie flex bg_fff" onclick= "modifyElement(${index} )">
                     <i class="fa-solid fa-user-pen bg_brown"></i>
                 </button>
                 <button class="deleteMe flex bg_fff bg_fff" onclick="deleteElement(${index})">
