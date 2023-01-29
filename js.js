@@ -1,46 +1,52 @@
-export function render() {
-  const panel = document.createElement('div');
-  panel.classList.add('[element]', 'flex', 'gapsmall', 'margin', 'flex_ai', 'brdr');
+export let photoURL;
+export let childimge;
 
-  for (const element of tab) {
-    const img = document.createElement('img');
-    img.src = '/ressources/portrait5.jpg';
-    img.alt = 'portrait5';
-    img.classList.add('imgRaduis');
+export function dragAndDrop(contenaire, inputElement) {
+  contenaire.addEventListener('dragover', event => {
+    event.preventDefault()
+    contenaire.classList.add('active')
+  })
 
-    const imgContainer = document.createElement('div');
-    imgContainer.classList.add('img');
-    imgContainer.appendChild(img);
+  contenaire.addEventListener('dragleave', () => {
+    contenaire.classList.remove('active')
+  })
 
-    const name = document.createElement('p');
-    name.textContent = `${element.prenom} ${element.nom} - ${element.groupe}`;
+  contenaire.addEventListener('drop', event => {
+    event.preventDefault()
+    let file = event.dataTransfer.files[0]
+    traitement(file)
+  })
 
-    const phone = document.createElement('p');
-    phone.textContent = element.telephone;
+  inputElement.addEventListener("change", (e) => {
+    let file = e.target.files[0]
+    traitement(file)
+  })
 
-    const dummyText = document.createElement('p');
-    dummyText.textContent =
-      "What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.";
+ function traitement(file) {
+  if (file.type.startsWith("image/") && file.size <= 5 * 1024 * 1024 ) {
+    let reader = new FileReader()
 
-    const contenue = document.createElement('div');
-    contenue.classList.add('contenue', 'flex', 'flex_dc', 'gapsmall');
-    contenue.append(name, phone, dummyText);
+    contenaire.innerHTML = '' 
 
-    const modifyBtn = document.createElement('button');
-    modifyBtn.classList.add('modifie', 'flex', 'bg_fff');
-    modifyBtn.innerHTML = '<i class="fa-solid fa-user-pen bg_brown"></i>';
+    reader.addEventListener("load", () => {
+      let imageURL = reader.result;
+      photoURL = imageURL
+      let img = document.createElement("img")
+      childimge = img
+      img.classList.add('imgTag')
+      img.src = imageURL
+      img.alt = "Dropped Image"
+      contenaire.appendChild(img)
+    })
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('deleteMe', 'flex', 'bg_fff', 'bg_fff');
-    deleteBtn.innerHTML = '<i class="fa-regular fa-trash-can bgc_red"></i>';
-    deleteBtn.addEventListener("click", () => deleteElement(tab.indexOf(element)));
+    reader.readAsDataURL(file)
+  } else {
+    // const span = document.createElement('span')
+     let span = "Seulement les images sont acceptées avec une taille maximale de 5 Mo."
+   contenaire.nextElementSibling.innerHTML = span
 
-    const iconContainer = document.createElement('div');
-    iconContainer.classList.add('icon', 'flex');
-    iconContainer.append(modifyBtn, deleteBtn);
-
-    panel.append(imgContainer, contenue, iconContainer);
+   
   }
-  document.querySelector('li').appendChild(panel);
 }
 
+}

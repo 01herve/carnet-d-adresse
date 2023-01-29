@@ -48,6 +48,7 @@ text-align: center; height: 140px;color: #555555;
 .icon{align-self: stretch;top: 0;}
 .icon button{top: 0;margin: 12px 8px; border-color: none; border: none;}
 .image.active{border: #555555 2px solid;}
+.imgTag{height: 100%; width: 100%; object-fit: cover;}
 
 .brdr{border-bottom: #555555 1px solid;}
 
