@@ -22,7 +22,7 @@ function render() {
                 </p>
             </div>
             <div class="icon flex">
-                <button class="modifie flex bg_fff" >
+                <button class="modifie flex bg_fff" onclick= modifyElement(${index} >
                     <i class="fa-solid fa-user-pen bg_brown"></i>
                 </button>
                 <button class="deleteMe flex bg_fff bg_fff" onclick="deleteElement(${index})">
@@ -38,3 +38,8 @@ window.deleteElement = function (index) {
     tab.splice(index, 1)
     render()
 }
+
+window.modifyElement = function (index) {
+    modifyIndex = index;
+    isModifying = true
+    for(const field in tab[modifyIndex])form[field].value = tab[modifyIndex][field]}
