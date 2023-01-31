@@ -20,15 +20,21 @@ text-align: center; height: 140px;color: #555555;
 .bgc_red{color:  #FF3838;}
 .bg_black{color: black;}
 
-
-
+label{color: #555555;}
+input:required,textarea{
+    background:url(/ressources/asterisk.svg) right  center  no-repeat;
+   background-size: 1.5%;
+   outline: none;
+    }
+input:focus:invalid, textarea:focus:invalid{border-color: #ff0000;background-image: none;
+    
+    }
 
 .hSize{height: 54px;}
 .HSize{height: 70px;}
 .wmax{height: 100vw;}
 .inputSizeH{height: 45px; outline: none;}
-.HHSize{height: 68rem;}
-.margeBig{margin:15px 86px ;}
+.HHSize{height: 70rem;}
 .margeBig{margin:15px 86px ;}
 .margin{margin: 20px;}
 .gapsmall{gap: 15px;}
@@ -52,4 +58,16 @@ text-align: center; height: 140px;color: #555555;
 
 .brdr{border-bottom: #555555 1px solid;}
 
+.capture{width:100%; height: 100%;}
 
+@media screen and (min-width: 1000px) and (max-width: 1418px){
+    .margeBig{margin:15px 0px }
+    .colsmall{width:40vw}
+    .col{width:60vw}}
+
+@media screen  and (max-width: 999px){ */
+    .flex{display: flex; flex-wrap: wrap;}
+    .respo{flex-direction: column;}
+    .margeBig{margin:15px 0px ;}
+    .colsmall{width:100vw}
+    .col{width:100vw}}

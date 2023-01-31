@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -20,15 +24,11 @@
       <nav class="nav bg_blue hSize HSize  templeteHead flex flex_ai ">
         <h2>Répertoire des contacts</h2>
       </nav>
-      <div class="flex margeBig bg_parent gapsmall flex_jcc  Hmax">
+      <div class="flex margeBig bg_parent gapsmall flex_jcc  Hmax respo">
         <form
           action="#"
           class="colsmall bg_fff bg_black HHSize flex flex_dc flex_jsb"
         >
-          <template>
-            <img src="/ressources/check.svg" alt="icon" />
-            <span class="error_message">message erreur</span>
-          </template>
           <nav
             class=" bg_blue colsmall hSize flex_ai flex flex_jcc bg_ff templeteHead PL"
           >
@@ -36,23 +36,38 @@
           </nav>
           <div class="form_groupe flex flex_dc margin gapsmall">
             <label for="prenom">Prénom</label>
-            <input type="text" class="prenom inputSizeH" name="prenom" />
+            <input
+              type="text"
+              class="prenom inputSizeH"
+              name="prenom"
+              required
+            />
           </div>
           <div class="form_groupe flex flex_dc margin gapsmall">
             <label for="nom">Nom</label>
-            <input type="text" class="nom inputSizeH" name="nom" />
+            <input type="text" class="nom inputSizeH" name="nom" required />
           </div>
           <div class="form_groupe flex flex_dc margin gapsmall">
             <label for="telephone">Télephone</label>
-            <input type="text" class="telephone inputSizeH" name="telephone" />
+            <input
+              type="text"
+              class="telephone inputSizeH"
+              name="telephone"
+              required
+            />
           </div>
           <div class="form_groupe flex flex_dc margin gapsmall">
             <label for="groupe">Groupe</label>
-            <input type="text" class="groupe inputSizeH" name="groupe" />
+            <input
+              type="text"
+              class="groupe inputSizeH"
+              name="groupe"
+              required
+            />
           </div>
           <div class="form_groupe flex flex_dc margin gapsmall">
             <label for="email">Email</label>
-            <input type="text" class="email inputSizeH" name="email" />
+            <input type="text" class="email inputSizeH" name="email" required />
           </div>
           <div class="form_groupe flex flex_dc margin gapsmall">
             <label for="bio">Bio</label>
@@ -62,6 +77,7 @@
               id="bio"
               cols="30"
               rows="10"
+              required
             ></textarea>
           </div>
           <div class="form_groupe flex flex_dc margin gapsmall">
